@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: $header1;
+}
+
+li,
+button,
+input,
+label,
+p,
+a {
+  font-size: calc(#{$text} + 1vw);
+}
+
+h2 {
+  font-size: calc(#{$header2} + 1vw);
+}
+
+h3 {
+  font-size: calc(#{$header3} + 1vw);
+}
+
+h4 {
+  font-size: calc(#{$header4} + 1vw);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

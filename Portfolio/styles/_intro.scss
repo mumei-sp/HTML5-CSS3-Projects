@@ -1,0 +1,117 @@
+nav {
+  padding-left: 5rem;
+  @include flex(row, space-between, center);
+  min-height: 10vh;
+  width: 60%;
+  flex-wrap: wrap;
+  .logo {
+    flex: 1 1 10rem;
+  }
+  ul {
+    @include flex(row, space-around, center);
+    flex: 1 1 40rem;
+  }
+}
+
+.intro {
+  min-height: 90vh;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+  @include flex(row, space-between, center);
+
+  h2 {
+    font-size: 8rem;
+    padding-top: 2rem;
+    display: inline-block;
+  }
+  h3 {
+    padding: 3rem 0rem;
+  }
+  p {
+    padding: 2rem 0rem;
+  }
+}
+
+.splash-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: -1;
+}
+
+.splash-left {
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  z-index: -1;
+}
+
+.active {
+  background: $background-color;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+  a {
+    color: white;
+  }
+}
+
+.intro-text,
+.intro-img {
+  flex: 1 1 40rem;
+}
+
+#leaf-left {
+  animation: leaf 1s alternate ease infinite;
+}
+
+#leaf-right {
+  animation: leaf 1s alternate ease infinite 0.5s;
+}
+
+#clock-hand {
+  animation: clock 2s linear infinite;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+
+#me {
+  animation: body 1s ease-in-out infinite alternate;
+  transform-origin: bottom;
+}
+
+@keyframes leaf {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-20%);
+  }
+}
+
+@keyframes clock {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes body {
+  from {
+    transform: rotateZ(1deg);
+  }
+  to {
+    transform: rotateZ(-2deg);
+  }
+}
+
+footer {
+  background: $background-color;
+  color: white;
+  min-height: 10vh;
+  @include flex(row, flex-start, center);
+  padding-left: 5rem;
+}
